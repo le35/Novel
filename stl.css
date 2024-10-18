@@ -1,0 +1,290 @@
+
+body{
+  background-color: rgb(16, 17, 17);
+  color: #ffffff;
+}
+
+.dark-mode{
+  background-color: #ffffff;
+  color: #000;
+  .menu{
+    background-color: rgb(232, 190, 248);
+  }
+  .rotape{
+    background-color: rgb(232, 190, 248);
+  }
+  .flip-card-front {
+    background: linear-gradient(120deg, rgb(232, 190, 248) 60%, rgb(204, 129, 223) 98%,
+       #bc70e7 40%, rgba(76, 3, 109, 0.603) 48%);
+    color: rgb(183, 3, 255);
+  }
+  .flip-card-back {
+    background: linear-gradient(120deg, #bc70e7 40%, rgb(73, 1, 76) 98%,
+       rgb(230, 195, 253) 40%, rgb(232, 190, 248) 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .codepen-button span{
+    background-color: rgb(146, 74, 180);
+  }
+  .bu{
+    background-color: rgb(146, 74, 180);
+  }
+}
+
+header, nav, main, aside, footer{
+  display: flex;
+  margin: 20px;
+}
+
+.cabeçalho{
+  flex: 1 1 100vw;
+  justify-content: center;
+}
+
+.menu{
+  flex: 1 1 100vw;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #322b38;
+  border-radius: 5px;
+  border: 1px solid #8806df;
+}
+
+menu a {
+  margin: 5%;
+  font-size: 20pt;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+main{
+  justify-content: center;
+  margin: 6%;
+}
+
+.mapa{
+  border: 3px solid rgb(183, 3, 255);
+  border-radius: 6px;
+}
+
+.relacionado{
+  flex: 1 1 200vw;
+  text-align: center;
+  justify-content: space-between;
+  margin: 10%;
+}
+
+.rotape{
+  flex: 1 1 100vw;
+  height: 100px;
+  background-color: #322b38;
+  border-radius: 5px;
+  border: 1px solid #8806df;
+}
+.escrita{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-left: 2%;
+  margin-top: 2%; 
+}
+
+
+/*button menu=======================================================================================================================================================================================*/
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+}
+  
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out;
+}
+  
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+  
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+  
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  background: #000;
+  border-radius: 3px;
+  height: 100%;
+}
+
+/*button Novel=====================================================================================================================================================================================================================================================================================================*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+  
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(201, 187, 187, 0.6);
+  --animation-color: #8806df;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+  
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/*cartao¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨*/
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+  
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+  
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgb(183, 3, 255);
+  border-radius: 1rem;
+}
+  
+.flip-card-front {
+  background: linear-gradient(120deg, #bc70e7 40%, rgb(73, 1, 76) 98%,
+     rgb(230, 195, 253) 40%, rgb(232, 190, 248) 100%);
+  color: white;
+}
+  
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(232, 190, 248) 60%, rgb(204, 129, 223) 98%,
+     #bc70e7 40%, rgba(76, 3, 109, 0.603) 48%);
+  color: rgb(183, 3, 255);
+  transform: rotateY(180deg);
+  }
+
+/*button de dark mode ==================================================================================================================================*/
+.bu{
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7576;
+  background-color: #3f2b44;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px #3f2b44,
+    0px 4px 16px #3f2b44;
+  transform-style: preserve-3d;
+  transform: scale(var(--s, 1)) perspective(600px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  perspective: 600px;
+  transition: transform 0.1s;
+  margin: auto 0;
+  margin-left: auto;
+}
+
+.bu:active {
+  transition: 0.3s;
+  transform: scale(0.93);
+}
+
+.sp {
+  background: linear-gradient(
+      90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+  
